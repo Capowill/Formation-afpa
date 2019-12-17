@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <!--Ecrivez un programme permettant de saisir différentes valeurs numérique (avec l'instruction window.prompt), 
+        ces valeurs seront rangées dans un tableau. La saisie s'arrête quand l'utilisateur entre la valeur 0.
+        A la fin de la saisie, votre programme doit afficher le nombre de valeurs saisies, la somme et lamoyenne.
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+function moyenne(){
+    var min = 0;
+    var max = 0;
+    var i = 1;
+    var tot = 0; // totale
+    var N = parseInt(prompt("Entrez la valeur"));
+    while (N != 0) // different de 0
+    {
+        tot += N;
+        i++;
+        N = parseInt(prompt("Entrez la valeur"));
+        if (max < N)
+        max = N;
+        if (min > N && N != 0)
+        min = N;
+    }
+    console.log("La moyenne est de : " + tot / i + "\nMax : " + max + "\nMin : " + min); 
+}
+
+
+
+
+
+
+
+        </script>
+        </body> 
+        </html>

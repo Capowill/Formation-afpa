@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>conditional and alternative instructions</title>
+</head>
+
+<body>
+    <script>
+        // TODO: finir de commenter
+        // EXERCICE 0
+
+        /*Enoncé
+        Codez les exemples 1 à 6 présentés dans le paragraphe L'action conditionnée.
+        */
+
+        /*  Exemple 1 :
+        Si Température > 38 alors 
+        Écrire "Le patient a de la fièvre"
+        Fin si  
+        */
+        var temp = parseInt(prompt("Saisissez la température"));
+        if (temp > 38) {
+            console.log("le patient a de la fièvre");
+        } else {
+            console.log("le patient n'a pas de fièvre");
+        }
+
+        /* Exemple 2:
+        Si Température > 41 et Tension > 25 alors 
+        Écrire "Le patient va perdre patience"  
+        Fin si
+        */
+        var temp = parseInt(prompt("Saisissez la température :"));
+        var tens = parseInt(prompt("Saisissez la tension :"));
+        if ((temp > 41) && (tens > 25)) {
+            console.log("Le patient va perdre patience");
+        } else {
+            console.log("Le patient sera patient");
+        }
+
+        /* Exemple 3:
+        Si non Patient alors
+        Écrire "Éconduire l'olibrius"  
+        Fin si
+        */
+        var temp = parseInt(prompt("Saisissez la température :"));
+        var tens = parseInt(prompt("Saisissez la tension :"));
+        var patient = ((temp > 41) && (tens > 25))
+        if (!patient) {
+            console.log("Econduire l'olibrius");
+        }
+
+        /*Exemple 4:
+        Si Température > 42 ou (Tension < 25 et Pouls > 180) alors  
+        Écrire "Prévenir la famille"  
+        Fin si
+        */
+        var temp = parseInt(prompt("Saisissez la température :"));
+        var tens = parseInt(prompt("Saisissez la tension :"));
+        var pulse = parseInt(prompt("Saisissez le pouls :"));
+        if ((temp > 42) || ((tens < 25) && (pulse > 180))) {
+            console.log("Prévenir la famille");
+        } else {
+            console.log("Ne pas prévenir la famille");
+        }
+
+        /* Exemple 5 :
+        Si Température > 40 ou Tension >= 25 alors 
+        Écrire "Hospitaliser le patient"  
+        Fin si    
+        */
+        var temp = parseInt(prompt("Saisissez la température :"))
+        var tens = parseInt(prompt("Saisissez la tension :"));
+        if ((temp > 40) || (tens >= 25)) {
+            console.log("Hospitaliser le patient");
+        } else {
+            console.log("Ne pas hospitaliser le patient");
+        }
+
+        /* Exemple 6 :
+        Si Patient ET Pouls = 0 alors
+        Écrire "Appeler le curé"
+        Fin si
+        */
+        var tens = parseInt(prompt("saisissez la tension :"));
+        var pulse = parseInt(prompt("Saisissez le pouls :"));
+        var patient = (tens == 0);
+        if ((patient) && (pulse == 0)) {
+            console.log("Appeler le curé");
+        }
+
+        // EXERCICE 1
+
+        /* Enoncé :
+        Ecrivez un programme qui demande un nombre à l'utilisateur puis qui teste si ce nombre est pair. 
+        Le programme doit afficher le résultat nombre pair ou nombre impair. 
+        Vous devez utiliser l'opérateur modulo % qui donne le reste d'une division. 
+        a%2 donne le reste de la division de a par 2, si ce reste est égal à zéro, a est divisible par 2.
+        */
+
+        // to know if a number is pair or unpair
+        var nbr = parseInt(prompt("saisissez une nombre :"));
+        var par = (nbr % 2);
+        if (par < 1) {
+            console.log("Le nombre est pair")
+        } else {
+            console.log("Le nombre est impair")
+        }
+
+        // EXERCICE 2
+
+        /*Ecrivez un programme qui demande l'année de naissance à l'utilisateur. 
+        En réponse votre programme doit afficher l'âge de l'utilisateur 
+        et indiquer si l'utilisateur est majeur ou mineur.
+        */
+
+        var dob = parseInt(prompt("Entrez votre année de naissance : (aaaa)"));
+        var year = 2019;
+        var age = (year - dob);
+        console.log("Tu as " + age + " ans");
+        if (age < 18) {
+            console.log(" et tu es mineur");
+        } else {
+            console.log(" et tu es majeur");
+        }
+
+        // EXERCICE 3
+
+        /*Faire la saisie de 2 nombres entiers, puis la saisie d'un opérateur +, -, * ou /. 
+        Si l'utilisateur entre un opérateur erroné, le programme affichera un message d'erreur. 
+        Dans le cas contraire, le programme effectuera l'opération demandée 
+        (en prévoyant le cas d'erreur division par 0), puis affichera le résultat.
+        */
+
+        var nbr1 = parseInt(prompt("Saisissez un premier nombre entier :"));
+        var nbr2 = parseInt(prompt("Saisissez un second nombre entier :"));
+        var op = prompt("Saisissez un opérateur : (+, -, * ou /)");
+        if (op == "/" && nbr2 == 0) {
+            console.log("La division n'est pas possible !");
+        } else {
+            switch (op) {
+                case "+":
+                    resultat = nbr1 + nbr2;
+                    break;
+                case "-":
+                    resultat = nbr1 - nbr2;
+                    break;
+                case "*":
+                    resultat = nbr1 * nbr2;
+                    break;
+                case "/":
+                    resultat = nbr1 / nbr2;
+                    break;
+                    Default: Alert("L'opérateur n'est pas valide. ")
+            }
+        }
+        alert("le résultat est " + nbr1 + op + nbr2 + "=" + resultat);
+
+        // EXERCICE 4
+
+        /*Un patron décide de calculer le montant de sa participation au prix du repas de ses employés de la façon suivante :
+        si il est célibataire : participation de 20%
+        si il est marié : participation de 25%
+        si il a des enfants : participation de 10% supplémentaires par enfant
+        la participation est plafonnée à 50%
+        si le salaire mensuel est inférieur à 1200 €, la participation est majorée de 10%.
+        Ecrire le programme qui lit les informations au clavier et affiche pour chaque salarié, la participation à laquelle il a droit.
+        */
+
+        var mar = (confirm("Est-ce qu'il est marié ?") == true);
+        var nbe = parseInt(prompt("Saisissez un nombre d'enfant :"));
+        var salaire = parseInt(prompt("Saisissez le salaire :"));
+        var pc = 0;
+        if (salaire < 1200) {
+            if (mar = true) {
+                pc = 25 + (10 * nbe) + 10;
+            } else {
+                pc = 20 + (10 * nbe) + 10;
+            }
+        } else {
+            if (mar = true) {
+                pc = 25 + (10 * nbe);
+            } else {
+                pc = 20 + (10 * nbe);
+            }
+        }
+        if (pc > 50) {
+            pc = 50;
+        }
+        alert("La participation est de " + pc);
+    </script>
+</body>
+
+</html>

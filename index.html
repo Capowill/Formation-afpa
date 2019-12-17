@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>premier Script </title>
+
 </head>
 
-
 <body>
-    
+    <script>
+// JS - 9 - TABLEAU 
+// EXERCICE 3 : TRI DUN TABLEAU (tri a bulles)
+
+/* ALGO 
+tri_à_bulles_optimisé(Tableau T)
+     pour i allant de (taille de T)-1 à 1
+       tableau_trié := vrai
+         pour j allant de 0 à i-1
+            si T[j+1] < T[j]
+               échanger(T[j+1], T[j])
+               tableau_trié := faux
+            si tableau_trié
+        fin tri_à_bulles_optimisé
+*/
+//source waytolean.com
+function sort(tab){ 
+    var change;
+    do{
+        change = false;
+        for(var i=0; i < tab.length-1; i++) { //condition de sorti
+            if(tab[i] > tab[i+1]) {
+                var tmp = tab[i];
+                tab[i] = tab[i+1];
+                tab[i+1] = tmp;
+                change = true;
+            }
+        }
+    } while(change);
+    console.log(tab);
+}
+var tab = [5, 8, 11, 6, 1, 9, 3];
+
+sort(tab); // appel de la fonciton qui contient le trie 
 
 
 
@@ -18,6 +52,24 @@
 
 
 
-    <script src="assets/fichier.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+    <!--    <script src="assets/js/fichier.js"></script> -->
 </body>
+
 </html>
