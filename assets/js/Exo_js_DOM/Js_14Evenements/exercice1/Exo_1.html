@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Js 14 Evenement</title>
+</head>
+
+<body>
+
+    <p>Saissisez un texte puis pressez le bouton : 'contrôle'</p>
+
+    <input type="text" id="name" name="name">
+    <button id="button" name="button">Contrôle</button>
+
+    <script>
+        console.log(name);
+        var element = document.getElementById("button"); //appel le id button du html
+
+        element.addEventListener("click", function () {
+            var name = document.getElementById("name").value;
+            alert("Vous avez saisi : " + name);
+        });
+
+        // addEventListener crée l'évenement que si on "click" ca active la fonction() ,
+        // qui va aller chercher notre valeur entrer dans notre input HTML
+    </script>
+
+    <!--
+           <script> //JS 11 : Intégrer du Javascript dans une page web
+               alert("Coucou !");
+               console.log("Ah que Coucou !");
+               document.write("Coucou beuh !");
+            </script> 
+        -->
+
+<!--
+var magic = parseInt(Math.random() * 100); // génère un nombre aleatoire 
+var element = document.getElementById();
+
+
+function verif(magic) {
+    var nombre = 0;
+    var play = true;
+
+    do {
+        nombre = getElementById("textBox1");
+        addEventListener(function(){
+        if (nombre == magic) {
+                ("Gagné !\nLe nombre était bien " + magic);
+            break;
+        } else if (nombre > magic) {
+            play = window.confirm("Trop grand ! Rejouer ?")
+        } else {
+            play = window.confirm("Trop petit ! Rejouer ?");
+        }
+     while (nombre != magic && nombre != null && play == true);
+    if (nombre == null || play == false) {
+        alert("Le nombre à trouver était " + magic);
+    }
+}};
+
+
+-->
+
+
+</body>
+
+</html>

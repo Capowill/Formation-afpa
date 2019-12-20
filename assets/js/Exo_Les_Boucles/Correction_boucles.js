@@ -42,9 +42,9 @@ Enfin, la page affiche sur la console le nombre de prénoms et les prénoms sais
     alert((compteur-1) + " prénom.s saisi.s : \n" + lstPrenoms);
 
 //### 2 - Entiers inférieurs à N
-
+/*
 Ecrivez un programme qui affiche les nombres inférieurs à N.
-
+*/
     var n = parseInt(prompt("Saisir un nombre"));  
        
     for (i = n; i!=0; i--)
@@ -53,9 +53,10 @@ Ecrivez un programme qui affiche les nombres inférieurs à N.
     }            
 
 //### 3 - Somme d'un intervalle
-
+/*
 Ecrivez un programme qui saisit deux nombres n1 et n2 et qui calcule ensuite la somme des entiers de 
 n1 à n2.
+*/
 
     var n1 = parseInt(prompt("Saisir un 1er entier"));  
     var n2 = parseInt(prompt("Saisir un 2ème entier"));  
@@ -68,7 +69,7 @@ n1 à n2.
 
     console.log("Total = "+total);
 
-Exemple : 3 et 6 saisis; on a donc la somme de 3+4+5+6 = 18.      
+//Exemple : 3 et 6 saisis; on a donc la somme de 3+4+5+6 = 18.      
 
 //#### 4 - Moyenne
 
@@ -113,7 +114,7 @@ Il est demandé de choisir la structure répétitive (`for`, `while`, `do...whil
 	    }
 	}
 
-
+/*
 ### 6 - Nombre de voyelles
 
 Ecrire le programme qui compte le nombre de voyelles d'un mot saisi au clavier, en utilisant :
@@ -121,7 +122,7 @@ Ecrire le programme qui compte le nombre de voyelles d'un mot saisi au clavier, 
 * `myVar.substr(p, n)` : extrait de la chaîne `myVar` une sous-chaîne de `n` caractères à partir de la position `p` 
 (attention, en Javascript, le 1<sup>er</sup> caractère se trouve à la position 0).
 * `myVar.indexOf(chaine)` : retourne le rang de la première occurrence de `chaine` dans la variable donnée (`myVar`). Si la sous-chaîne n'est pas trouvée, `indexOf` Retourne la valeur -1. 
-
+*/
         var voyelles = 0;
         var mot = prompt("Saisir un mot :");
 				
@@ -156,13 +157,13 @@ Ecrire le programme qui compte le nombre de voyelles d'un mot saisi au clavier, 
          // affichage
          console.log('nombre de voyelle dans ' + word + ' : ' + count);
 
-   
+/*   
 ### 7 - Un nombre est-il premier
 
 Ecrivez un programme qui permet de tester si un nombre est premier.
 
 [Lire cette ressource] http://chatinais.pagesperso-orange.fr/coursjs/exercice/frprem0.htm
-
+*/
 	while (isNaN(number)) {
 	    // on renouvèle la saisie
 	    number = parseInt(window.prompt('Saisissez un premier nombre :'));

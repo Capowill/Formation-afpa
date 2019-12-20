@@ -1,12 +1,10 @@
 // JS - 8 - LES FONCTIONS 
 //EXERCICE 1 - 
-
 /*
 Créer les 2 fonctions suivantes :
  produit(x, y) qui retourne le produit des 2 variables x, y passées en paramètre.
  afficheImg(image) qui affiche l’image passée en paramètre.
 */
-
 var x;
 var y;
 var image = "";
@@ -17,15 +15,12 @@ function cube(x) {
     console.log("Le cube de " + x + " est egal à " + cube);
     return cube;
 }
-
 function produit(x, y) // produit = multiplication
 {
-
     produit = x * y;
     console.log("Le produit de " + x + " x " + y + " est egal à " + produit);
     return produit;
 }
-
 function afficheImg(image) {
     document.write("<img src=\"" + image + "\">"); // permet d'appeler une image de notre html
     // Attention au guillements pour la concaténation, il faut échapper avec des \ les guillemets des attributs HTML
@@ -34,9 +29,7 @@ function afficheImg(image) {
 var resultat = cube(3);
 console.log("cube : " + cube);
 afficheImg("assets/images/papillon.jpg"); // Va chercher l'image dans nos dossier pour l'afficher
-
-
-
+//=====================================================
 // JS - 8 - LES FONCTIONS 
 // EXERCICE 2
 /*
@@ -90,7 +83,7 @@ maVariable(phrase, lettre);
 		
         alert("La lettre '"+lettre+"' est présente "+compteur+" fois dans '"+phrase+"'");
             */
-
+//=====================================================
 // JS - 8 - LES FONCTIONS 
 // EXERCICE 3 - Menu
 
@@ -168,7 +161,7 @@ maVariable(phrase, lettre);
             default:
                 alert("Choix non valide");
         }
-
+//=====================================================
 // JS - 8 - LES FONCTIONS 
 // EXERCICE 4
 
@@ -192,3 +185,35 @@ function strtok(str1,str2,n)
      var n = 2;
      
      strtok(str1, str2, n);
+
+
+
+
+//Nombre magique par Vincent .
+
+function nbMagic() {
+    let magic = parseInt(Math.random() * 100);
+    //Math.random genère un nombre aleatoire *100
+    let n = 0;
+    let replay = true;
+
+    while (replay = true) {
+        while (n != magic) // condition de sorti
+        {
+            n = parseInt(prompt("Saisissez un nombre: "));
+            if (n > magic) {
+                alert("trop grand ");
+            } else if (n < magic) {
+                alert("trop petit ");
+            } else {
+                alert("BRAVO !");
+                if (confirm("voulez vous rejouez?")) {
+                    nbMagic();
+                } else {
+                    replay = false;
+                }
+            }
+        }
+    }
+}
+nbMagic();

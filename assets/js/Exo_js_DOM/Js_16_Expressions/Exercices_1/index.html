@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>teste code postal Regexp</title>
+</head>
+
+<body>
+
+    <script>
+        var filtreC = /[0-9]{5}/;
+        var teste = parseInt(prompt("Entrez votre code postale"));
+
+        if (teste = filtreC) {
+            console.log("code postal : "+teste);
+            
+        }
+        console.log("Ceci n'est pas un code postal "+teste);
+        
+    </script>
+
+    <fieldset>
+
+        Code postal : <input id="codeP" type="text" name="cp">
+    </fieldset>
+
+</body>
+
+</html>

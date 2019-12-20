@@ -104,7 +104,7 @@ tri_à_bulles_optimisé(Tableau T)
         fin tri_à_bulles_optimisé
 */
 //source WayToLearn.com
-function sort(tab){ 
+function sort(tab){ // tri le tableau en ordre ascendant (plus petit au plus grand)
     var change;
     do{
         change = false;

@@ -72,7 +72,6 @@ var i = 0;
 
 while (++i <= n) { // ( 1+i <=n)
     console.log(i + "x" + x + "=" + (i * x)); // i*x=
-
 }
 //==============================================================================================
 // JS - 7 - LES BOUCLES
@@ -130,19 +129,53 @@ SinonSi ( n < magic ) ALORS
     "plus grand"
 Sinon 
     "trouver"
-
 */
 var magic = parseInt(Math.random() * 100);
 //Math.random genère un nombre aleatoire *100
-var n = parseInt(prompt("Saisissez un nombre: "));
+console.log(magic);
+var n = 0;
 
 while (n != magic) // condition de sorti
 {
+    n = parseInt(prompt("Saisissez un nombre: "));
     if (n > magic)
-        console.log("Plus petit ");
+        alert("trop grand ");
+
     else if (n < magic)
-        console.log("Plus grand ");
-    var n = parseInt(prompt("Saisissez un nombre: "));
+        alert("trop petit ");
+    else
+        alert("Gagner, le nombre magique etait : " + magic);
 }
-// une fois que la/les conditions sont remplit 
-console.log("Gagner, le nombre magique etait : " + magic);
+
+// AUTRES SOLUTION : Correction
+var magic = parseInt(Math.random()*100);
+var nombre = 0;
+var play = true;
+
+do 
+{
+	   nombre = parseInt(window.prompt("Saisissez un nombre\n(ou cliquez sur Annuler pour arrêter)"));
+	
+       if (nombre == magic) 
+       {
+		   alert("Gagné !\nLe nombre était bien " + magic);
+		   break;
+	   }
+	   else if (nombre > magic) 
+	   {
+	       play = window.confirm("Trop grand ! Rejouer ?")
+	   }
+	   else 
+	   {
+			play = window.confirm("Trop petit ! Rejouer ?");
+		}
+}
+while (nombre != magic && nombre != null && play == true);
+
+    if (nombre == null || play == false) 
+    {
+	   alert("Le nombre à trouver était " + magic);
+    }
+
+
+

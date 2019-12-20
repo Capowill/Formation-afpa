@@ -95,6 +95,7 @@ if (n % 2 == 0) {
 } else {
     alert("Le nombre saisi est impaire");
 }
+//==============================================================================================
 // JS - 06 - Instructions conditionnelles et alternatives
 //EXERCICE 2 : AGE
 var n = window.prompt("Saississez votre année de naissance");

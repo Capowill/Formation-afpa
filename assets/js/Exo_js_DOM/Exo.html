@@ -3,10 +3,7 @@
 
 <head>
 
-    <!--Ecrivez un programme permettant de saisir différentes valeurs numérique (avec l'instruction window.prompt), 
-        ces valeurs seront rangées dans un tableau. La saisie s'arrête quand l'utilisateur entre la valeur 0.
-        A la fin de la saisie, votre programme doit afficher le nombre de valeurs saisies, la somme et lamoyenne.
-    -->
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,32 +13,46 @@
 
 <body>
     <script>
+        /*
+Ecrivez un programme permettant de saisir différentes valeurs numérique (avec l'instruction window.prompt), 
+ces valeurs seront rangées dans un tableau. La saisie s'arrête quand l'utilisateur entre la valeur 0.
+A la fin de la saisie, votre programme doit afficher le nombre de valeurs saisies, la somme et la moyenne.
+*/
 
-function moyenne(){
-    var min = 0;
-    var max = 0;
-    var i = 1;
-    var tot = 0; // totale
-    var N = parseInt(prompt("Entrez la valeur"));
-    while (N != 0) // different de 0
-    {
-        tot += N;
-        i++;
-        N = parseInt(prompt("Entrez la valeur"));
-        if (max < N)
-        max = N;
-        if (min > N && N != 0)
-        min = N;
-    }
-    console.log("La moyenne est de : " + tot / i + "\nMax : " + max + "\nMin : " + min); 
+/* ca fonctione mais y manque un morceau :D
+var tableau = []; //tableau dynamique
+var cases = parseInt(window.prompt("Saisir nombre pour tableau"));
+var somme = 0;
+var moyenne = 0;
+
+        while (tableau[cases-1] != 0) //i-1 permet de voir la case precedente.
+        {
+            tableau[cases] = parseInt(window.prompt("Saisir nombre pour tableau"));
+            somme = somme + tableau[cases];
+            cases++;
+        }
+        moyenne = somme / cases;
+
+console.log("Vous avez saisi : " + (cases) + " nombre.");
+console.log("La somme est de : " + somme + " .");
+console.log("La moyenne de ces valeurs est de : " + moyenne + " .");
+*/
+var tableau = []; //tableau dynamique
+var i = 0; //cases
+var somme = 0;
+
+do { // fait ca :
+    tableau[i] = parseInt(window.prompt("Saisir un nombre pour tableau"));
+    somme = somme + tableau[i];
+    i++;
 }
+//tantque : 
+while (tableau[i - 1] != 0 || i < 1) //i-1 permet de comparer avec la case precedente.
 
+console.log("Vous avez saisi : " + (i - 1) + " valeur.");
+console.log("La somme est de : " + somme + " .");
+console.log("La moyenne de ces valeurs est de : " + (somme / (i - 1)) + " .");
+    </script>
+</body>
 
-
-
-
-
-
-        </script>
-        </body> 
-        </html>
+</html>
