@@ -1,0 +1,37 @@
+/* CSS Contact EXERCICE FORMULAIRE JS-15*/
+
+/* COLOR */
+
+h3 {
+    color: red;
+}
+
+/* PLACEMENT */
+
+p {
+    color: red;
+    display: inline;
+    margin: right 10px;
+}
+
+ul {
+    margin: 30px;
+    margin-top: center;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#envoi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

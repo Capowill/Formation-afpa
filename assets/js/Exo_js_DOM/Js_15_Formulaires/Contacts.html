@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Contact</title>
+
+    <link href="assets/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Vos Coordonnées :</h1>
+    <h3>* Ces zones sont obligatoires pour envoyer le formulaire.</h3>
+
+    <form method="post">
+
+
+
+        <ul>
+            <li>
+                <div>
+                    Société :
+                    <input id="societer" type="text" name="nom">
+                    <p> *</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    Personne a contacter :
+                    <input type="text" name="prénom">
+                    <p> *</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    adresse de l'entreprise :
+                    <textarea name="commentaire" rows="3" cols="30"></textarea>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    Code postal :
+                    <input type="text" name="cp">
+                    <p> *</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    Ville :
+                    <input type="text" name="Ville">
+                    <p> *</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    E-mail :
+                    <input type="email" name="email" placeholder="Exemple@mail.com">
+                    <p> *</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    Telephone :
+                    <input type="telephone" name="telephone" placeholder="01.02.03.04.05">
+                </div>
+            </li>
+        </ul>
+
+
+        <h4>Selectionnez l'environnement technique du projet</h4>
+        <select name="Sujet" size="1">
+            <option id="" value="choisissez">choisissez</option>
+            <option id="" value="Acess">Acess</option>
+            <option id="" value="java">java</option>
+            <option id="" value="Delphi">Delphi</option>
+            <option id="" value="Windew">Windew</option>
+            <option id="" value="Visual Basic">Visual Basic</option>
+            <option id="" value="PowerBuilder">PowerBuilder</option>
+            <option id="" value="Internet">Internet</option>
+            <option id="" value="Intranet">Intranet</option>
+            <option id="" value="Windows NT">Windows NT</option>
+            <option id="" value="Unix">Unix</option>
+            <option id="" value="SQL server">SQL server</option>
+            <option id="" value="Oracle">Oracle</option>
+            <option id="" value="Autres...">Autres...</option>
+
+        </select>
+
+        <textarea name="commentaire" rows="6" cols="20"></textarea>
+
+        <footer>
+
+            <input type="submit" value="Envoyer">
+
+            <input type="reset" value="Annuler">
+
+        </footer>
+
+    </form>
+
+
+
+
+
+
+
+
+    <script src="assets/fichier.js"></script>
+
+</body>
+
+</html>

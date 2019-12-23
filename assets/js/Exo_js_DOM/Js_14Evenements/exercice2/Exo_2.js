@@ -1,7 +1,8 @@
+
+
+
 var magic = parseInt(Math.random() * 100);
 console.log(magic);
-
-
 
 document.getElementById("button1").addEventListener('click', function () 
     {

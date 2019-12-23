@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+</head>
+
+<body>
+    <header>
+
+        <div>
+
+            <p class="droite">Tout le jardin</p>
+        </div>
+        <p>La qualité depuis 70 ans</p>
+    </header>
+
+    <ul>
+        <li>
+            <a href="index.html">Acceuil</a>
+        </li>
+        <li>
+            <a href="Tableau.html">Tableau</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+
+
+
+
+    <h1>Contact</h1>
+    <p>Ces champs sont obligatoires *</p>
+
+    <form method="post">
+        <fieldset class="fieldset">
+            <legend>Coordonnées</legend>
+            Votre nom* : <input type="text" name="nom"><br>
+            Votre prénom* : <input type="text" name="prénom"><br>
+            Sexe* : <br>
+            <input type="radio" name="sex" value="Féminin"> Féminin
+            <input type="radio" name="sex" value="Masculin"> Masculin
+            <br>
+
+            Date Naissance* : <input type="date" name="ddn"> <br>
+            Code postal : <input id="code" type="text" name="cp"><br>
+            adresse : <input type="text" name="adresse"><br>
+            Ville : <input type="text" name="Ville"><br>
+            Email* : <input id="mails" type="email" name="email" placeholder="Exemple@mail.com"><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset class="fieldset">
+            <legend>Votre demande</legend>
+            Sujet* : <select name="Sujet" size="1">
+                <option value="Mes commandes">Mes commandes</option>
+                <option value="Question sur un produit">Question sur un produit</option>
+                <option value="Reclamation">Reclamation</option>
+                <option value="Autres">Autres</option>
+            </select>
+            <br>
+            Votre question : <textarea name="commentaire" rows="10" cols="50"></textarea>
+
+        </fieldset>
+        <br>
+        <input type="checkbox" name="Confirmation" value="Confirmation">J'accepte le traitement informatique de ce
+        formulaire.
+        <br>
+
+        <input id="button1" type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+
+    </form>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="">Mentions légales</a>
+            </li>
+            <li>
+                <a href="">Horaires</a>
+            </li>
+            <li>
+                <a href="">Plan du site</a>
+            </li>
+
+        </ul>
+    </footer>
+
+    <script src="fichier.js"></script>
+</body>
+</html>
