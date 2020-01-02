@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>Exercice formulaire JS</title>
+</head>
+
+<body class="container-fluid m-3">
+
+    <fieldset>
+        <div class="col">
+            <h1>Vos coordonnées</h1>
+            <h5>* Ces champs sont obligatoires pour envoyer le formulaire.</h5>
+        </div>
+        <div class="row">
+            <label class="col-2">Société :</label><input class="col-2" id="testfun" type="text" name="societe" required>
+            <p class="col-2">*</p>
+        </div>
+        <div class="row">
+            <label class="col-2">Personne à contacter :</label><input class="col-2" id="testfun" type="text"
+                name="Pcontact" required>
+            <p class="col-2">*</p>
+        </div>
+        <div class="row">
+            <label class="col-2">Adresse de l'entreprise :</label><input class="col-2" id="testfun" type="text"
+                name="Adresse">
+        </div>
+        <div class="row">
+            <label class="col-2">Code postal :</label><input class="col-2" id="postal" type="text" name="codepostal" required>
+            <p class="col-2">*</p>
+        </div>
+        <div class="row">
+            <label class="col-2">Ville :</label><input class="col-2" id="testfun" type="text" name="ville" required>
+            <p class="col-2">*</p>
+        </div>
+        <div class="row">
+            <label class="col-2">E-mail :</label><input class="col-2" id="email" type="text" name="mail"
+                placeholder="exemple@mail.fr" required>
+            <p class="col-2">*</p>
+        </div>
+        <div class="row">
+            <label class="col-2">Téléphone :</label><input class="col-2"type="text" name="telephone">
+        </div>
+        <div class="row">
+            <label class="col-2">Environnement technique du projet</label>
+        </div>
+        <div>
+            <select id="selection">
+                <option value="choix">Choisissez</option>
+                <option value="Access">Access</option>
+                <option value="Java">Java</option>
+                <option value="Delphi">Delphi</option>
+                <option value="Windev">Windev</option>
+                <option value="Visual Basic">Visual Basic</option>
+                <option value="Power Builder">Power Builder</option>
+                <option value="Internet">Internet</option>
+                <option value="Intranet">Intranet</option>
+                <option value="Windows NT">Windows NT</option>
+                <option value="Unix">Unix</option>
+                <option value="SQL Server">SQL Server</option>
+                <option value="Oracle">Oracle</option>
+                <option value="Autres...">Autres...</option>
+            </select>
+        </div>
+        <label class="col-2" for="message"></label>
+        <textarea id="text" name="message" rows="5" cols="25"></textarea>
+
+    </fieldset>
+
+
+
+
+    <footer>
+        <label for="envoyer"></label><input id="submit" class="btn btn-primary" type="submit" name="" value="Envoyer"
+            onclick="testcode(); testmail(); comment();">
+        <label for="annul"></label><input class="btn btn btn-secondary" type="reset" name="annule" value="Effacer">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="assets/fichier.js"></script>
+</body>
+
+</html>
